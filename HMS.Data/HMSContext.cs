@@ -20,9 +20,9 @@ namespace HMS.Data
         {
             return new HMSContext();
         }
-        public DbSet<AccomodationType> Accomodations { get; set; }
-        public DbSet<AccodomationPackage> AccodomationPackages { get; set; }
-        public DbSet<Accodomation> Accodomations { get; set; }
+        public DbSet<AccomodationType> AccomodationTypes { get; set; }
+        public DbSet<AccomodationPackage> AccodomationPackages { get; set; }
+        public DbSet<Accomodation> Accodomations { get; set; }
         public DbSet<Booking> Bookings { get; set; }
 
     }

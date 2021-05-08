@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF68815F-080F-46EA-8A75-2E86E04DF78D}</ProjectGuid>
+    <ProjectGuid>{39F2CF2B-9CDE-4797-A37B-E96D8114810B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HMS.Data</RootNamespace>
-    <AssemblyName>HMS.Data</AssemblyName>
+    <RootNamespace>HMS.Services</RootNamespace>
+    <AssemblyName>HMS.Services</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -54,49 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HMSContext.cs" />
-    <Compile Include="Migrations\202105041346362_BasicEntities.cs" />
-    <Compile Include="Migrations\202105041346362_BasicEntities.Designer.cs">
-      <DependentUpon>202105041346362_BasicEntities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105041736218_addedUserToHMSContext.cs" />
-    <Compile Include="Migrations\202105041736218_addedUserToHMSContext.Designer.cs">
-      <DependentUpon>202105041736218_addedUserToHMSContext.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105050546362_renameAccomodation.cs" />
-    <Compile Include="Migrations\202105050546362_renameAccomodation.Designer.cs">
-      <DependentUpon>202105050546362_renameAccomodation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105050550053_renameAccomodationPackage.cs" />
-    <Compile Include="Migrations\202105050550053_renameAccomodationPackage.Designer.cs">
-      <DependentUpon>202105050550053_renameAccomodationPackage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="AccomodationTypesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\HMS.Data\HMS.Data.csproj">
+      <Project>{BF68815F-080F-46EA-8A75-2E86E04DF78D}</Project>
+      <Name>HMS.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HMS.Entities\HMS.Entities.csproj">
       <Project>{0B3352F2-DFCB-4ED9-A862-C80733D21A77}</Project>
       <Name>HMS.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105041346362_BasicEntities.resx">
-      <DependentUpon>202105041346362_BasicEntities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105041736218_addedUserToHMSContext.resx">
-      <DependentUpon>202105041736218_addedUserToHMSContext.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105050546362_renameAccomodation.resx">
-      <DependentUpon>202105050546362_renameAccomodation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105050550053_renameAccomodationPackage.resx">
-      <DependentUpon>202105050550053_renameAccomodationPackage.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

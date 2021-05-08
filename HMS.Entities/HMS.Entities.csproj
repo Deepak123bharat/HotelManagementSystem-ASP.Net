@@ -54,8 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accodomation.cs" />
-    <Compile Include="AccodomationPackage.cs" />
+    <Compile Include="Accomodation.cs" />
+    <Compile Include="AccomodationPackage.cs" />
     <Compile Include="AccomodationType.cs" />
     <Compile Include="Booking.cs" />
     <Compile Include="HMSUser.cs" />

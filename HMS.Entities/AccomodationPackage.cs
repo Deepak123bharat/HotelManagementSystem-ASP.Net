@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HMS.Entities
 {
-    public class AccodomationPackage
+    public class AccomodationPackage
     {
         public int ID { get; set; }
         public int AccodomationID { get; set; }

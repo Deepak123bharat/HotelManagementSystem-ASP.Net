@@ -169,8 +169,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Dashboard\Controllers\AccomodationTypesController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
+    <Compile Include="Areas\Dashboard\ViewModels\AccomodationTypesModels.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -184,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Dashboard\Content\css\styles.css" />
-    <Content Include="Areas\Dashboard\Content\js\scripts.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -199,6 +200,10 @@
     <Content Include="Areas\Dashboard\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Dashboard\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Dashboard\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Dashboard\Views\AccomodationTypes\Index.cshtml" />
+    <Content Include="Areas\Dashboard\Views\AccomodationTypes\Listing.cshtml" />
+    <Content Include="Areas\Dashboard\Views\AccomodationTypes\Action.cshtml" />
+    <Content Include="Areas\Dashboard\Views\AccomodationTypes\Delete.cshtml" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -251,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Dashboard\Content\js\" />
     <Folder Include="Areas\Dashboard\Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +280,10 @@
     <ProjectReference Include="..\HMS.Entities\HMS.Entities.csproj">
       <Project>{0B3352F2-DFCB-4ED9-A862-C80733D21A77}</Project>
       <Name>HMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HMS.Services\HMS.Services.csproj">
+      <Project>{39F2CF2B-9CDE-4797-A37B-E96D8114810B}</Project>
+      <Name>HMS.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
